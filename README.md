@@ -12,31 +12,14 @@
 
 ## 下载
 
-前往 [Releases](../../releases/latest) 下载最新版。
+前往 [**最新版 Releases**](https://github.com/woolpixels/Maki-releases/releases/latest)，在 Assets 中下载对应平台的安装包。
 
-### macOS
+| 平台 | 文件 | 系统要求 |
+| --- | --- | --- |
+| macOS | `Maki-<版本>-arm64.dmg` | Apple Silicon Mac（M1 / M2 / M3 / M4 等），macOS 13 或更新；不支持 Intel Mac |
+| Windows | `Maki-<版本>-x64-setup.exe` | Windows 11 或 Windows 10 22H2，64 位 |
 
-下载：
-
-`Maki-2.2.1-arm64.dmg`
-
-适用于：
-
-- Apple Silicon Mac（M1 / M2 / M3 / M4 等）
-- macOS 13 或更新版本
-- 不支持 Intel Mac
-
-### Windows
-
-下载：
-
-`Maki-2.2.1-x64-setup.exe`
-
-适用于：
-
-- Windows 11
-- Windows 10 22H2
-- 64 位系统
+每个版本的发布页都附有安装包的 SHA-256 校验值，历史更新见 [CHANGELOG](CHANGELOG.md)。
 
 ---
 
@@ -137,7 +120,7 @@ Maki 的完整流程只有 6 步：
 
 ### macOS
 
-1. 下载 `Maki-2.2.1-arm64.dmg`
+1. 下载 `Maki-<版本>-arm64.dmg`
 2. 双击打开 DMG
 3. 将 **Maki** 拖入 **Applications**
 4. 从「应用程序」中打开 Maki
@@ -150,7 +133,7 @@ Maki 已通过 Apple 开发者签名与 Apple 公证（Notarization）。
 
 ### Windows
 
-1. 下载 `Maki-2.2.1-x64-setup.exe`
+1. 下载 `Maki-<版本>-x64-setup.exe`
 2. 双击运行安装程序
 3. 按安装向导完成安装
 4. 从桌面或开始菜单打开 Maki
@@ -168,6 +151,20 @@ Maki 已通过 Apple 开发者签名与 Apple 公证（Notarization）。
 这是 Windows 对未签名且下载量较少的软件进行的 SmartScreen 提示，并不代表安装包检测到了恶意内容。
 
 升级时直接运行新版安装包，安装到原位置即可。
+
+### 校验安装包（可选）
+
+在发布页复制该版本的 SHA-256，与本机计算结果比对：
+
+```bash
+# macOS
+shasum -a 256 Maki-<版本>-arm64.dmg
+```
+
+```powershell
+# Windows（PowerShell）
+Get-FileHash .\Maki-<版本>-x64-setup.exe -Algorithm SHA256
+```
 
 ---
 
@@ -236,8 +233,10 @@ Maki · 巻纂
 
 Made by Woolpixels
 
-如有问题或建议，可以通过 Maki「关于」页面中的小红书、GitHub 或邮箱联系。
+### 反馈与联系
 
-Email: `odyssey.moment@outlook.com`
+- 问题与建议：欢迎在 [Issues](https://github.com/woolpixels/Maki-releases/issues) 提出，请注明系统版本、Maki 版本和复现步骤（不要上传漫画内容）。
+- 邮箱：`odyssey.moment@outlook.com`
+- 也可以通过 Maki「关于」页面中的小红书联系。
 
 Copyright © 2026 Woolpixels
